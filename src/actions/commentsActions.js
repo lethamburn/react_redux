@@ -15,7 +15,7 @@ export const actionGetCommentsError = () => ({
   type: GET_COMMENTS_ERROR,
 });
 
-export function getComentarios(postId) {
+export function getComments(postId) {
   return async (dispatch) => {
     dispatch(actionGetComments());
 

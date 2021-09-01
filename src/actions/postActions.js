@@ -16,7 +16,7 @@ export const actionGetPostError = () => ({
 });
 
 export function getPost(postId) {
-  return async (dispatch) => {
+  return async dispatch => {
     dispatch(actionGetPost());
 
     try {
@@ -24,6 +24,7 @@ export function getPost(postId) {
         `https://jsonplaceholder.typicode.com/posts/${postId}`
       );
       const data = await response.json();
+      console.log("DATA->",data);
 
       dispatch(actionGetPostOk(data));
     } catch (error) {
